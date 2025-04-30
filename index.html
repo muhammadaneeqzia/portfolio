@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M Aneeq Zia</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+  <style>
+    .typing-container {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #343a40;
+    }
+
+    #changing-text {
+      color: #d9534f;
+      /* Red color for the dynamic word */
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.2em;
+      background-color: #343a40;
+      margin-left: 2px;
+      animation: blink 0.7s infinite;
+      vertical-align: bottom;
+    }
+
+    .progress-bar {
+      background-color: #d9534f;
+    }
+
+    .hire-me-btn {
+      background-color: #d9534f;
+      color: white;
+      border: none;
+    }
+
+    .hire-me-btn:hover {
+      background-color: #c9302c;
+    }
+
+    @keyframes blink {
+
+      0%,
+      50% {
+        opacity: 1;
+      }
+
+      51%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .card-body p {
+      font-size: large;
+    }
+
+    .skill-card {
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .progress-circle {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: conic-gradient(red calc(var(--percentage) * 1%), #e6e6e6 0%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+    }
+
+    .progress-circle span {
+      position: absolute;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .hover-effect {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-effect:hover {
+      transform: scale(1.05);
+      /* Slightly enlarge the card */
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+      /* Add a shadow for emphasis */
+    }
+
+    .icon {
+      font-size: 2rem;
+      color: #d63384;
+    }
+
+    h2,
+    h4 {
+      color: #d63384;
+    }
+
+    .contact-info {
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .col-md-4 img {
+        height: 300px;
+        /* Reduce the height for mobile devices */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid" name="navigation" id="navigation">
+      <a class="navbar-brand" href="#"><img style="height: 50px;" src="logo.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">
+              <i class="bi bi-house-door"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">
+              <i class="bi bi-info-circle"></i> About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">
+              <i class="bi bi-gear"></i> Skills
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">
+              <i class="bi bi-briefcase"></i> Projects
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">
+              <i class="bi bi-envelope"></i> Contact Us
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+  </nav>
+
+  <!-- Navbar End -->
+
+  <!-- Introduction Card -->
+  <div class="card mb-3 border-0 mt-5" name="home" id="home">
+    <div class="row g-0 align-items-center">
+      <div class="col-md-8 col-12 text-center px-4">
+        <div class="card-body">
+          <h5 class="card-title display-5 fw-bold">Hello, My name is <i class="text-danger">Aneeq</i></h5>
+          <div class="typing-container">
+            I'm a <span id="changing-text"></span><span class="cursor"></span>
+          </div>
+          <p class="card-text mt-4">I'm a Web Developer with experience of 1 year. I can design your website to look
+            amazing and user-friendly, and much more.</p>
+          <button type="button" class="btn btn-outline-danger" style="width: 170px;">Download CV</button>
+        </div>
+      </div>
+      <div class="col-md-4 col-12 text-center">
+        <!-- Adjusting Image Responsively -->
+        <img src="3-removebg-preview.png" class="img-fluid " alt="Profile Picture"
+          style="max-width: 100%; height: auto;">
+      </div>
+    </div>
+  </div>
+  <!-- Introduction Card End -->
+
+  <!-- About Section -->
+  <div class="container my-5" name="about" id="about">
+    <div class="row">
+      <div class="col-md-8">
+        <h5 class="card-title display-5 fw-bold">About</h5>
+        <div class="my-2" style="width: 90px; height: 3px; background-color: red;"></div>
+        <div class="my-1" style="width: 50px; height: 3px; background-color: red;"></div>
+        <hr>
+        <h3 class="card-subtitle mb-2 text-body-secondary">
+          I'm Aneeq Zia and <i class="text-danger">Student</i>
+        </h3>
+        <p class="card-text">
+          As a versatile professional, I excel in web development and design, seamlessly crafting visually stunning and
+          functionally robust websites. My YouTube channel showcases a diverse range of content, reflecting my passion
+          for sharing knowledge. Additionally, my adept video editing skills elevate the storytelling experience,
+          delivering engaging and impactful narratives.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section End -->
+  <div class="container py-5 ">
+    <div class=" gy-4 my-4">
+      <!-- Left Section -->
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Birthday:</strong> 10 Oct 2003</p>
+            <p><strong>Website:</strong><a href="https://neekuportfolio.netlify.app/"
+                style="text-decoration: none;color: black;"> www.aneeq.com</a></p>
+            <p><strong>Degree:</strong> BsCS</p>
+            <p><strong>City:</strong> Multan</p>
+          </div>
+          <div class="col-md-6">
+            <p><strong>Age:</strong> 21 Years</p>
+            <p><strong>Email:</strong> maneeqzia.com@gmail.com</p>
+            <p><strong>Phone:</strong> +92-3143277538</p>
+            <p><strong>Freelance:</strong> Available</p>
+          </div>
+        </div>
+        <div class="mt-3">
+          <button type="button" class="btn btn-outline-danger mt-2">Hire Me</button>
+        </div>
+      </div>
+    </div>
+    <!-- Experience Section -->
+    <div class="container mb-5">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card shadow">
+            <div class="card-body">
+
+              <h5 class="card-title fw-bold">Education</h5>
+              <hr>
+              <p class="card-text"><span class="bi bi-calendar3-fill me-2"></span>2006 - 2018</p>
+              <h4>Matric In Science</h4>
+              <p>Matriculated with distinction, laying a strong foundation for a multifaceted career in web development
+                and design.</p>
+              <p class="card-text"><span class="bi bi-calendar3-fill me-2"></span>2006 - 2018</p>
+              <h4>Matric In Science</h4>
+              <p>Matriculated with distinction, laying a strong foundation for a multifaceted career in web development
+                and design.</p>
+              <p class="card-text"><span class="bi bi-calendar3-fill me-2"></span>2006 - 2018</p>
+              <h4>Matric In Science</h4>
+              <p>Matriculated with distinction, laying a strong foundation for a multifaceted career in web development
+                and design.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Experience</h5>
+              <hr>
+              <p class="card-text"><span class="bi bi-calendar3-fill me-2"></span>2023 - 2024</p>
+              <h4>Flutter Developer</h4>
+              <p>Successfully developed and launched multiple cross-platform apps, mastering Flutter for scalable and
+                responsive mobile solutions.</p>
+              <p class="card-text"><span class="bi bi-calendar3-fill me-2"></span>2022 - 2024</p>
+              <h4>Website Designer</h4>
+              <p>Skilled in creating visually appealing and user-friendly websites, with a focus on responsive design
+                and seamless user experiences</p>
+              <p class="card-text"><span class="bi bi-calendar3-fill me-2"></span>2019 - 2024</p>
+              <h4>Video Editor</h4>
+              <p>Proficient in crafting engaging and high-quality videos, utilizing advanced editing techniques to tell
+                compelling stories and enhance visual content.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Experience Section End -->
+    <!-- skill-card-start -->
+    <div class="container my-5" name="skills" id="skills">
+      <div class="row">
+        <div class="col-md-8">
+          <h5 class="card-title display-5 fw-bold">Skills</h5>
+          <div class="my-2" style="width: 90px; height: 3px; background-color: red;"></div>
+          <div class="my-1" style="width: 50px; height: 3px; background-color: red;"></div>
+          <hr>
+          <h3 class="card-subtitle mb-2 text-body-secondary">
+            I'm Web Designer & <i class="text-danger">App Developer </i>
+          </h3>
+          <p class="card-text">
+            As a versatile professional, I excel in **frontend web development** and **Flutter app development**,
+            seamlessly crafting modern, responsive, and functionally robust websites and mobile applications. My passion
+            lies in delivering intuitive user interfaces and engaging user experiences, combining design precision with
+            development expertise. My skills in web development and cross-platform app creation reflect my dedication to
+            crafting solutions that are both visually stunning and performance-driven. </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <div class="row g-4">
+        <!-- Flutter Card -->
+        <div class="col-md-3">
+          <div class="card skill-card">
+            <div class="progress-circle" style="--percentage: 90;">
+              <span>90%</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Flutter</h5>
+              <p class="card-text">Proficient in building cross-platform mobile applications with Flutter, ensuring
+                seamless performance and intuitive user experiences.</p>
+            </div>
+          </div>
+        </div>
+        <!-- HTML/CSS/JS Card -->
+        <div class="col-md-3">
+          <div class="card skill-card">
+            <div class="progress-circle" style="--percentage: 82;">
+              <span>82%</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">HTML/CSS/JS</h5>
+              <p class="card-text">Experienced in creating responsive, user-friendly websites with modern design and
+                functionality using HTML, CSS, and JavaScript.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Python Card -->
+        <div class="col-md-3">
+          <div class="card skill-card">
+            <div class="progress-circle" style="--percentage: 70;">
+              <span>70%</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text">Skilled in Python for developing backend logic, data analysis, and implementing
+                efficient solutions to complex problems <br> in less time.</p>
+            </div>
+          </div>
+        </div>
+        <!-- C#/.NET Card -->
+        <div class="col-md-3">
+          <div class="card skill-card">
+            <div class="progress-circle" style="--percentage: 79;">
+              <span>79%</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">C#/.NET</h5>
+              <p class="card-text">Proficient in building robust applications with C# and .NET, ensuring scalability and
+                maintainable code <br> architecture.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container my-5" name="projects" id="projects">
+      <div class="row">
+        <div class="col-md-8">
+          <h5 class="card-title display-5 fw-bold">Projects</h5>
+          <div class="my-2" style="width: 90px; height: 3px; background-color: red;"></div>
+          <div class="my-1" style="width: 50px; height: 3px; background-color: red;"></div>
+          <hr>
+          <h3 class="card-subtitle mb-2 text-body-secondary">
+            Web projects :<span class="text-danger"> Frontend</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      <div class="col">
+        <div class="card hover-effect">
+          <img src="ecom.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">E.com Store Web</h5>
+            <p class="card-text">This is an e-commerce website showcasing products, categories, and payment integration.
+              Built with HTML, CSS, and JavaScript, it offers a responsive layout and seamless user experience for
+              shopping.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card hover-effect">
+          <img src="travel.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Travel Booking Web</h5>
+            <p class="card-text">This is a travel website providing destination guides, itineraries, and tips. Designed
+              with HTML, CSS, and JavaScript, it features stunning visuals and a user-friendly, responsive design.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card hover-effect">
+          <img src="gym.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Gym Trainers Web</h5>
+            <p class="card-text">This is a gym website showcasing fitness programs, trainers, and schedules. Built with
+              HTML, CSS, and JavaScript, it emphasizes responsive layouts and a modern, engaging user experience.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card hover-effect">
+          <img src="food.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Food Delivery Web</h5>
+            <p class="card-text">This is a food website offering recipes, meal plans, and cooking tips. Developed using
+              HTML, CSS, and JavaScript, it features an attractive layout and smooth navigation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 class="card-subtitle mb-2 text-body-secondary my-4">
+        Mobile App projects :<span class="text-danger"> Frontend/Backend</span>
+      </h3>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 my-5">
+      <div class="col">
+        <div class="card hover-effect">
+          <img src="weather.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Weather App</h5>
+            <p class="card-text">This weather app provides real-time forecasts and location-based weather updates.
+              Developed with Flutter, it includes dynamic graphics and a robust backend API integration.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card hover-effect">
+          <img src="health.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Health App</h5>
+            <p class="card-text">This health app helps users track fitness goals and monitor daily activities. Designed
+              in Flutter, it features interactive UI and backend support for personalized insights.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card hover-effect">
+          <img src="foodmobile.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Food App</h5>
+            <p class="card-text">This mobile app allows users to explore restaurants, view menus, and order food. Built
+              with Flutter, it features a user-friendly interface and integrated backend for order management.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card hover-effect">
+          <img src="travel.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Travel App</h5>
+            <p class="card-text">This travel app offers trip planning, hotel bookings, and itinerary management. Created
+              with Flutter, it combines a smooth UI with backend services for seamless navigation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <h5 class="card-title display-5 fw-bold" name="contact" id="contact">Contact Us</h5>
+        <div class="my-2" style="width: 90px; height: 3px; background-color: red;"></div>
+        <div class="my-1" style="width: 50px; height: 3px; background-color: red;"></div>
+        <hr>
+
+
+      </div>
+    </div>
+    <div class="container my-5">
+      <h2 style="color: red;">Have You Any Queary?</h2>
+      <h4 style="color: red;">I'm here for service</h4>
+
+      <div class="row contact-info">
+        <!-- Phone -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="icon mb-2">📞</div>
+          <h6>Call Us On</h6>
+          <p>+92-3143277538</p>
+        </div>
+        <!-- University -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="icon mb-2">🏫</div>
+          <h6>University</h6>
+          <p>BZU Multan</p>
+        </div>
+        <!-- Email -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="icon mb-2">✉️</div>
+          <h6>Email</h6>
+          <p>maneeqzia.com@gmail.com</p>
+        </div>
+        <!-- Website -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="icon mb-2">🌐</div>
+          <h6>Website</h6>
+          <a href="https://neekuportfolio.netlify.app/" style="text-decoration: none; color: black;">
+            <p> www.aneeq.com</p>
+          </a>
+        </div>
+      </div>
+
+      <h2 style="color: red;">Send Me An E-mail</h2>
+      <h4 style="color: black;">I'm Will Response You Instant</h4>
+    </div>
+    <form id="contactForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        <div class="form-text text-danger" id="nameError" style="display: none;">Please enter a valid name using English
+          letters only.</div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <div class="form-text text-danger" id="emailError" style="display: none;">Please enter a valid email address
+          (e.g., example@gmail.com).</div>
+      </div>
+      <div class="mb-3">
+        <label for="subject" class="form-label">Subject</label>
+        <input type="text" class="form-control" id="subject" placeholder="Enter a subject">
+        <div class="form-text text-danger" id="subjectError" style="display: none;">Subject cannot be empty.</div>
+      </div>
+      <label for="message" class="form-label">Message</label>
+      <div class="form-floating">
+
+        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+        <div class="form-text text-danger" id="messageError" style="display: none;">Message cannot be empty.</div>
+      </div>
+      <div class="mt-3">
+        <button type="submit" class="btn btn-outline-danger mt-2">Hire Me</button>
+      </div>
+    </form>
+    <footer class="bg-white py-5 mt-5 border-top">
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <!-- Navigation Links -->
+          <div class="col-md-6 mb-4">
+            <h5 class="text-danger fw-bold">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#home" class="text-black-50 text-decoration-none">Home</a></li>
+              <li><a href="#about" class="text-black-50 text-decoration-none">About</a></li>
+              <li><a href="#skills" class="text-black-50 text-decoration-none">Services</a></li>
+              <li><a href="#projects" class="text-black-50 text-decoration-none">Portfolio</a></li>
+              <li><a href="#contact" class="text-black-50 text-decoration-none">Contact</a></li>
+            </ul>
+          </div>
+          <!-- Contact Section -->
+          <div class="col-md-6 mb-4">
+            <h5 class="text-danger fw-bold">Contact</h5>
+            <p class="text-black-50 mb-1"><i class="bi bi-envelope text-danger me-2"></i>maneeqzia.com@gmail.com</p>
+            <p class="text-black-50 mb-1"><i class="bi bi-telephone text-danger me-2"></i>+92 314 3277538</p>
+            <p class="text-black-50"><i class="bi bi-geo-alt text-danger me-2"></i>Bzu Multan</p>
+            <!-- Social Media Links -->
+            <div class="mt-3">
+              <a href="https://www.facebook.com/m.aneeq.54?mibextid=ZbWKwL"
+                class="btn btn-outline-danger btn-sm me-2"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.facebook.com/m.aneeq.54?mibextid=ZbWKwL"
+                class="btn btn-outline-danger btn-sm me-2"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.instagram.com/neeku_547?igsh=eDNqaGJncDd2MWtw"
+                class="btn btn-outline-danger btn-sm"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="text-black-50">
+        <div class="text-center">
+          <p class="mb-0 text-black-50">© 2024 Your Website. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <div class="text-center"><a href="#navigation"> <button type="button" class="btn btn-outline-danger"
+          style="width: 170px;">Go To Upward</button></a></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script>
+      const words = ["Web Designer", "Web Developer", "App Developer", "YouTuber"];
+      const typingSpeed = 150;
+      const erasingSpeed = 100;
+      const delayBetweenWords = 1500;
+      let wordIndex = 0;
+      let charIndex = 0;
+      let isErasing = false;
+      const changingTextElement = document.getElementById("changing-text");
+
+      function type() {
+        const currentWord = words[wordIndex];
+        if (!isErasing && charIndex <= currentWord.length) {
+          changingTextElement.textContent = currentWord.substring(0, charIndex++);
+          setTimeout(type, typingSpeed);
+        } else if (isErasing && charIndex >= 0) {
+          changingTextElement.textContent = currentWord.substring(0, charIndex--);
+          setTimeout(type, erasingSpeed);
+        } else {
+          isErasing = !isErasing;
+          if (!isErasing) {
+            wordIndex = (wordIndex + 1) % words.length;
+          }
+          setTimeout(type, delayBetweenWords);
+        }
+      }
+
+      type();
+      document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the form from submitting
+        let valid = true;
+
+        // Validate Name
+        const name = document.getElementById('name').value.trim();
+        const nameRegex = /^[A-Za-z\s]+$/; // English letters and spaces only
+        if (!name || !nameRegex.test(name)) {
+          document.getElementById('nameError').style.display = 'block';
+          valid = false;
+        } else {
+          document.getElementById('nameError').style.display = 'none';
+        }
+
+        // Validate Email
+        const email = document.getElementById('email').value.trim();
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!email || !emailRegex.test(email)) {
+          document.getElementById('emailError').style.display = 'block';
+          valid = false;
+        } else {
+          document.getElementById('emailError').style.display = 'none';
+        }
+
+        // Validate Subject
+        const subject = document.getElementById('subject').value.trim();
+        if (!subject) {
+          document.getElementById('subjectError').style.display = 'block';
+          valid = false;
+        } else {
+          document.getElementById('subjectError').style.display = 'none';
+        }
+
+        // Validate Message
+        const message = document.getElementById('message').value.trim();
+        if (!message) {
+          document.getElementById('messageError').style.display = 'block';
+          valid = false;
+        } else {
+          document.getElementById('messageError').style.display = 'none';
+        }
+
+        // If all fields are valid, alert success
+        if (valid) {
+          alert('Form submitted successfully!');
+        }
+      });
+    </script>
+</body>
+
+</html>
